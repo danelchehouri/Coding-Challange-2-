@@ -1,0 +1,34 @@
+U20452568
+
+const bill = 430; 
+const calcTip = bill => (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.2;
+console.log("Initial logic for calculating tip using ternary operator.");
+
+const displayOutput = (bill, tip) => {
+    const total = bill + tip;
+    console.log(`The bill was $${bill}, the tip was $${tip}, and the total value is $${total}.`);
+};
+console.log("Add output functionality to display bill, tip, and total.");
+
+const testBill = 100;
+const testTip = calcTip(testBill);
+displayOutput(testBill, testTip);
+console.log("Create and test calcTip function.");
+
+const bills = [275, 40, 430];
+const tips = bills.map(bill => calcTip(bill));
+const totals = bills.map((bill, index) => bill + tips[index]);
+console.log("Implement and populate arrays for bills, tips, and totals.");
+
+console.log("Data Set 1:");
+console.log("Bills:", bills);
+console.log("Tips:", tips);
+console.log("Totals:", totals);
+
+const bills2 = [125, 555, 44];
+const tips2 = bills2.map(bill => calcTip(bill));
+const totals2 = bills2.map((bill, index) => bill + tips2[index]);
+console.log("Data Set 2:");
+console.log("Bills:", bills2);
+console.log("Tips:", tips2);
+console.log("Totals:", totals2);
